@@ -1,0 +1,12 @@
+function [ rot ] = Find_Rotation(image1,image2,methodNum,dimNum  )
+%
+Xcorrelation = Normalized_Cross_Correlation(image1, image2);
+Ycorrelation = Normalized_Cross_Correlation(image1', image2);
+im1Correlation = Normalized_Cross_Correlation(image1, image1');
+im1Correlation = Normalized_Cross_Correlation(image1, image1');
+
+rot=atan2d(Ycorrelation, Xcorrelation);
+
+
+end
+

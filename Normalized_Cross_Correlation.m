@@ -11,4 +11,3 @@ grade = (im1 - avr1)'*(im2 - avr2)  / (((sum((im1(:)-avr1).^2)).^(1/2)) * ((sum(
 
 
 end
-
