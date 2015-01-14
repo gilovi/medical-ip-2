@@ -22,7 +22,7 @@ H_AB = sum(H_AB(:)); % joint entropy
 
 gr = P_AB .* log2(P_AB./(PB*PA));
 gr(isnan(gr)) = 0;
-grade = -sum(gr(:))/H_AB;
+grade = (-sum(gr(:))/H_AB);
 
 end
 
