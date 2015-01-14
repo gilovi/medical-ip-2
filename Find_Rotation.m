@@ -1,6 +1,17 @@
 function [ rot ] = Find_Rotation(image1,image2,methodNum,dimNum)
 %
+if dimNum == 1 % arround x 
+    per = [1,3,2];
+elseif dimNum == 2 % arround y
+    per = [3,2,1];
+else
+    per = [1,2,3];
+end
 
+    image1 = permute(image1,per);
+    image2 = permute(image2,per);
+
+    
 if methodNum == 1
     method = @Normalized_Cross_Correlation;
 else 

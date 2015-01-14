@@ -6,7 +6,7 @@ function h=joint_h(img1,img2)
 img1 = img1(:);
 img2 = img2(:);
 s = numel(img1);
-N = max(max(img1), max(img2));
+N = max(max(img1), max(img2))+1;
 
 h = zeros(N,N);
     for i = 1:s
